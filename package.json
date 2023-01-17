@@ -1,0 +1,39 @@
+{
+  "name": "auto_import_datacenter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node ace build --production",
+    "start": "node server.js",
+    "dev": "node ace serve --watch",
+    "production": "pm2 start process.config.js",
+    "lint": "eslint . --ext=.ts"
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "^3.0.6",
+    "adonis-preset-ts": "^1.1.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-adonis": "^1.1.0",
+    "pino-pretty": "^4.5.0",
+    "typescript": "^4.1.3",
+    "youch": "^2.1.1",
+    "youch-terminal": "^1.0.1"
+  },
+  "dependencies": {
+    "@adonisjs/core": "^5.0.4-preview-rc-2.1",
+    "@adonisjs/lucid": "^10.0.0",
+    "@adonisjs/repl": "^1.1.6",
+    "axios": "^0.21.1",
+    "luxon": "^1.25.0",
+    "moment": "^2.29.1",
+    "mssql": "^4.1.0",
+    "mysql": "^2.18.1",
+    "node-cron": "^2.0.3",
+    "ping": "^0.4.0",
+    "proxy-addr": "^2.0.6",
+    "reflect-metadata": "^0.1.13",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "source-map-support": "^0.5.19"
+  }
+}
