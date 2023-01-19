@@ -26,7 +26,6 @@ export const GetTransferPendingReceive = async(code, conmy) => {
     .andWhere('aria_type_in', 0)
     .andWhere('m_id_in', '=', '')
     .andWhere('m_no_in', '=', '')
-    .andWhere('a.id', '=', '311')
     .whereNotNull('br_code_in')
   
     .orderBy('a.br_code_in', 'desc')

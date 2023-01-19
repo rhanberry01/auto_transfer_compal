@@ -14,7 +14,7 @@ export const BRANCH_AUTO = [
   'srstala2',
   'srsphase7',
   'srsbagbaguin',
-  //'srsstocristo', 
+  'srsstocristo', 
   'srsfrancisco',
   'srspalmera',
   'srsvanguard',
@@ -26,7 +26,7 @@ export const BRANCH_AUTO = [
   'srst',
   'srslaloma',
   'srscalamansian',
-  'srspabahay',
+  //'srspabahay',
   'srsgulod',
   'srsminuyan',
   'srscom',
@@ -41,6 +41,7 @@ export const BRANCH_AUTO = [
   'srsgv',
   'srsbrixton',
   'srspasongtamo'
+
 
   
 ]

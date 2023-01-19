@@ -50,7 +50,7 @@ export default class AutoImportRrToCvsController {
                  /*  if (dispatch.posted === 0) {
                     await UpdateDispatchHeaderPosted(transfer_id, connectionOut) 
                   }   */
-                 
+                 console.log(transfer_id);
                   const dispatchItems = await GetDispatchTransferItems(transfer_id, connectiontransfer)
                  
                   const receive = await CheckReceiveTransfer(trx, transfer_id)
@@ -174,8 +174,9 @@ export default class AutoImportRrToCvsController {
             branch_name: branchName,
             branch_code: branchCode
           })
+          console.log(barcode + `UOM MIS MATCH UOM TRANSFER ${item.uom} UOM POS ${products[0].uom}`)
         }
-        console.log(barcode + `UOM MIS MATCH UOM TRANSFER ${item.uom} UOM POS ${products[0].uom}`)
+       
         // console.log(item.prod_id, products[0].ProductID, products[0].Barcode, item.transfer_id)
       }
       
