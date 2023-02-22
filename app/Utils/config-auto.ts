@@ -1,49 +1,54 @@
 
 // PUT branch code here that you want to auto transfer in
 export const BRANCH_AUTO = [
-  'srsllano',
-  'srssanana',
-  'srsphase9',
-  'srsdeparo',
-  'srstala',
+/* //'srspalmera',
+// 'srsllano',
+ 'srssanana',
+  /* 'srsphase9',
+ 'srsdeparo',
+   'srstala',
   'srsbatasan',
-  'srstville',
+ 'srstville',
   'srsminuyan', 
-  'srsphase3',
+   'srsphase3',
   'srspalay',
   'srstala2',
   'srsphase7',
   'srsbagbaguin',
   'srsstocristo', 
-  'srsfrancisco',
-  'srspalmera',
-  'srsvanguard',
-  'srsbarracks',
-  'srsbdulo',
-  'srsbatasan2',
-  'srscommonwealth',
-  'srsbsl',
-  'srst',
-  'srslaloma',
-  'srscalamansian',
-  //'srspabahay',
-  'srsgulod',
-  'srsminuyan',
-  'srscom',
-  'srscainta2',
-  'srsstarosa',
-  'srscapulong',
-  'srscielito',
-  'srsvillarosario',
-  'srsnorthville',
-  'srsnorthfairview',
-  'srssanjoseheights',
-  'srsgv',
-  'srsbrixton',
-  'srspasongtamo'
+  'srsfrancisco',*/
+ // 'srspalmera',
+ // 'srsvanguard',
+ // 'srsbarracks',
+ // 'srsbdulo',
+ // 'srsbatasan2',
+//  
+  //'srsbsl',
+  //'srst',
+ // 'srslaloma',
+ // 'srscalamansian',
+ // 'srspabahay',
+ // 'srsgulod',
+ // 
+ 
+ // 
+ // 
+//  
+ // 
+ // 
+ // 
+ // */
+ 'srsminuyan',
+ 'srscommonwealth',
+ 'srscapulong',
+ 'srscielito',
+ 'srsvillarosario',
+ 'srsnorthfairview',
+ 'srstawidsapa',
+ 'srspasongtamo',
+ 'srsnorthville',
+ //'srssanjoseheights',
 
-
-  
 ]
 
 export const BRANCH_AUTO_API = {
@@ -85,6 +90,7 @@ export const BRANCH_AUTO_API = {
   srssanjoseheights: 'http://192.168.0.148:4007/api/purchaser/receive_po/transfer/receive_auto/post_receiving',
   srsgv: 'http://192.168.0.148:4008/api/purchaser/receive_po/transfer/receive_auto/post_receiving',
   srsbrixton: 'http://192.168.0.148:4009/api/purchaser/receive_po/transfer/receive_auto/post_receiving',
-  srspasongtamo: 'http://192.168.0.148:4010/api/purchaser/receive_po/transfer/receive_auto/post_receiving',
+  srspasongtamo: 'http://192.168.0.148:4010/api/purchaser/receive_po/transfer/receive_auto/post_receiving', 
+  srstawidsapa: 'http://192.168.0.148:4011/api/purchaser/receive_po/transfer/receive_auto/post_receiving',
 }
 

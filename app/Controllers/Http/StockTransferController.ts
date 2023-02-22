@@ -12,6 +12,7 @@ export default class AutoImportRrToCvsController {
   public async index({ request }: HttpContextContract) {
     
     const branches = await GetBranches()
+	//console.log(branches)
     for (const [key, branch] of branches.entries()) {
 
       const branchCode = branch.code
@@ -137,21 +138,27 @@ export default class AutoImportRrToCvsController {
       const uom = item.uom
 
       
-      if(products[0].ProductID != prod_id) {
-        console.log(products[0].ProductID+'-@-'+prod_id)
-         await UpdateStockids(transfer_id,products[0].ProductID,uom,barcode,connectiontransfer)
-      }
+     
 
 
       if(products.length === 0) {
+
+
         errors.push({
           transfer_id: item.transfer_id,
           barcode: barcode,
-          message: 'Barcode does not exist',
+          message: `Barcode does not exist (${barcode})  `,
           branch_name: branchName,
           branch_code: branchCode
         })
         console.log(barcode + ' Barcode does not exist')
+      }else{
+
+        if(products[0].ProductID != prod_id) {
+          console.log(products[0].ProductID+'-@-'+prod_id)
+           await UpdateStockids(transfer_id,products[0].ProductID,uom,barcode,connectiontransfer)
+        }
+        
       }
 
       if(products.length > 1) {
@@ -170,7 +177,7 @@ export default class AutoImportRrToCvsController {
           errors.push({
             transfer_id: item.transfer_id,
             barcode: barcode,
-            message: `UOM MIS MATCH UOM TRANSFER ${item.uom} UOM POS ${products[0].uom}`,
+            message:  ` (${barcode})  UOM MIS MATCH UOM TRANSFER ${item.uom} UOM POS ${products[0].uom}`,
             branch_name: branchName,
             branch_code: branchCode
           })

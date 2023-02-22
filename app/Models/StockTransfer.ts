@@ -51,9 +51,10 @@ export const UpdateDispatchHeaderPosted = async (transfer_id, connectionName) =>
 export const GetDispatchTransferItems = async (transfer_id, connectionName) => {
   const row = await Database.connection(connectionName)
     .from('0_transfer_details as a')
-    .select('a.transfer_id','a.stock_id_2 as prod_id', 'a.barcode', 'a.description as item_name', 'a.uom', 'a.actual_qty_out as qty')
+    .select('a.transfer_id','a.stock_id_2 as prod_id', 'a.barcode', 'a.description as item_name', 'a.uom')
+    .sum('a.actual_qty_out as qty')
     .where('a.transfer_id', transfer_id)
-    .groupBy('a.barcode', 'a.stock_id_2', 'a.actual_qty_out')
+    .groupBy('a.barcode', 'a.stock_id_2')
   return row
 }
 
