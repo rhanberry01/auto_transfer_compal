@@ -29,7 +29,9 @@ export const GetTransferPendingReceive = async(code, conmy) => {
     .whereNotNull('br_code_in')
   
     .orderBy('a.br_code_in', 'desc')
-  return row
+	
+	return row.length > 0 ? row : false
+  
 }
 
 export const GetPendingDispatchHeader = async (transfer_id, connectionName) => {

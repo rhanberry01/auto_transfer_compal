@@ -21,13 +21,16 @@ export default class AutoImportRrToCvsController {
       const connection = connections[key]
       
       if(connection.connectionStatus) {
-        console.log(branchName);
+        
          // check if branches is required to auto
         if(BRANCH_AUTO.includes(branchCode)) { 
+			console.log(branchName);
           // loop transfers pending for pending auto in
           const myconn = `tenant_my_transfer_${branchCode}`
           const transfers = await GetTransferPendingReceive(branchCode,myconn)
-         
+         if(transfers === false){
+			 process.exit(0)
+		 }
            for(const transfer of transfers) {
 
             const transfer_id = transfer.id
